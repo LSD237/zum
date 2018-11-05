@@ -1,0 +1,330 @@
+/********************* Общие классы ************************/
+* {
+    box-sizing: border-box;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+.button {
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+    padding: 25px 70px;
+    border-radius: 12px;
+    background-color: #ff3658;
+    background-image: linear-gradient(to bottom, #ff6c54, #ff6154, #ff5454, #ff4756, #ff3658);
+}
+.clear { 
+    /* отменяет обтекание-float (c обоих сторон)*/
+    clear: both;
+}
+.img-responsive {
+    /* уменьшает картинку при уменьшении окна браузера(делает подстраиваемый размер в 100%) */
+    display: inline-block;
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------- Шапка-меню -----------------------------*/
+/*--------------------------------------------------------------*/
+header {
+    z-index: 1;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(143,143,143,1);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(143,143,143,1);
+    box-shadow: 0px 1px 1px 0px rgba(143,143,143,1);
+}
+header .logo {
+    padding-top: 25px;
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    /* убирает маркеры */
+    list-style: none;
+}
+header nav ul li {
+    /* добавляет строчному элементу возможность блочных свойств(сделали список в строку) */
+    display: inline-block;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #3f4244;
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+header nav ul li a:hover {
+    background-image: linear-gradient(to bottom, #68fac7, #5ff3c9, #57edcb, #50e6cc, #4cdfcc);   
+    color: white;
+}
+/* ***********???????????????******* */
+header .nav-mobile {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 45px;
+    height: 45px;
+}
+
+header .nav-mobile img {
+    cursor: pointer;
+}
+
+header .nav-mobile .nav-mobile-wrapper {
+    display: none;
+    position: absolute;
+    right: -5px;
+    top: 29px;
+    /* ? */
+    padding-top: 30px;
+}
+
+header .nav-mobile ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 1px 1px 0px rgba(143,143,143,1);
+    padding: 10px;
+}
+
+header .nav-mobile:hover .nav-mobile-wrapper {
+    /* это в каком то смысле условие? */
+    display: block;
+}
+
+header .nav-mobile a {
+    /* убирает подчеркивание у ссылок */
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 5px;
+}
+
+/******************************* Верхняя секция ******************************/
+.section-top {
+    background-image: linear-gradient(to bottom, #6cfec6, #5cf4ca, #50eacc, #47e0ce, #43d6cd); 
+    color: white;
+    padding-top: 270px;
+    padding-bottom: 250px;
+    text-align: center;
+}
+.section-top h1 {
+    font-size: 58px;
+}
+
+
+/****************************** Секция сервисов  *******************************/
+.section-services {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    text-align: center;
+}
+.section-services .service-line .column {
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+    margin-bottom: 80px;
+}
+.section-services .service-line .column .title {
+    color: #3f4244;
+}
+.section-services .service-line .column .clarification-service {
+    color: #929ba0;
+    margin-top: 50px;
+}
+
+
+
+/****************************** Секция с окнами *****************************/
+.section-with-windows {
+    /* скрывает вылезающий край (содержимого секции) картинки */
+    overflow: hidden; 
+    color: white;
+    text-align: center;
+    padding-top: 85px;
+    background-image: linear-gradient(to bottom, #ff6954, #ff5e54, #ff5355, #ff4556, #ff3658);
+}
+.section-with-windows h2 {
+    font-size: 35px;
+}
+.section-with-windows .descripion {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.section-with-windows .windows {
+    display: inline-block;
+    padding-top: 115px;
+    position: relative;
+    bottom: -25px;
+}
+
+
+/******************************** Секция со смартфонами ***********************/
+.smartphone-section {
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+.smartphone-section .smartphones,
+.smartphone-section .content-of-smartphones {
+    float: left;
+    width: 50%;
+}
+.smartphone-section .smartphones {
+    text-align: center;
+    padding-right: 15px;
+}
+.smartphone-section .content-of-smartphones {
+    padding-top: 4%;
+}
+.smartphone-section .content-of-smartphones .header {
+    color: #3f4244;
+}
+.smartphone-section .content-of-smartphones .descripion {
+    color: #929ba0;
+    font-size: 15px;
+    padding-bottom: 50px;
+}
+
+
+/****************************** Секция с иллюстрациями *******************************/
+.illustrations-section {
+    text-align: center;
+    background-image: linear-gradient(to bottom, #5ceec9, #58ebca, #54e8ca, #51e4cb, #4ee1cb);
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+.illustrations-section .illustration-title {
+    color: white;
+}
+.illustrations-section .illustration-clarification {
+    color: white;
+    margin: 0 auto;
+    max-width: 750px;
+}
+.illustrations-section .subheadings {
+    padding-top: 115px;
+}
+.illustrations-section .subheadings ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.illustrations-section .subheadings li {
+    display: inline-block;
+    padding: 0 3%;
+}
+.illustrations-section .subheadings li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/******* Блок с иллюстрациями ******/
+.illustrations-section .block-with-illustrations {
+    padding-top: 45px;
+}
+.illustrations-section .block-with-illustrations figure {
+    display: block;
+    width: 33%;
+    float: left;
+    padding: 15px 15px;
+    margin: 0;
+}
+.illustrations-section .block-with-illustrations .framing-picture .picture img {
+    display: inline-block;
+    width: 100%;
+}
+.illustrations-section .block-with-illustrations figure .title {
+    color: #3f4244;
+    font-size: 15px;
+}
+.illustrations-section .block-with-illustrations .framing-picture .clarification {
+    color: #929ba0;
+    font-size: 13px;
+}
+.illustrations-section .block-with-illustrations .framing-picture {
+    background-color: white;
+}
+.illustrations-section .block-with-illustrations figcaption {
+    height: 130px;
+    padding: 7% 12%;
+}
+.illustrations-section .block-with-illustrations .framing-picture .title {
+    margin: 0;
+}
+.illustrations-section .block-with-illustrations .framing-picture .clarification {
+    padding-bottom: 30px;
+}
+.illustrations-section .arrow-to-down img {
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 730px) {
+    header nav ul li a {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .section-services .service-line .column {
+        width: 50%;
+    }
+    .button {
+        font-size: 20px;
+        padding: 20px 55px;
+    }
+    .section-top h1 {
+        font-size: 48px;
+    }
+    .illustrations-section .block-with-illustrations figure {
+        width: 50%;
+    }
+}
+@media (max-width: 550px) {
+    header nav {
+        display: none;
+    }
+
+    header .nav-mobile {
+        display: block;
+    }
+
+    .section-services .service-line .column {
+        width: 100%;
+    }
+    .illustrations-section .block-with-illustrations figure {
+        width: 100%;
+    }
+    .smartphone-section .smartphones,
+    .smartphone-section .content-of-smartphones {
+    width: 100%;
+    text-align: center;
+    }
+    .smartphone-section .content-of-smartphones .button-smartphones {
+        text-align: center;
+    }
+}
+
+/* Задание двигать экран в браузере и смотреть где ломается и добавлять УСЛОВИЯ */
+/* Править свойства селекторов по "группам" 1-свойства текста 2-свойства цвета отображения 3-свойства расположения */
