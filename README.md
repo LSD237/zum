@@ -1,6 +1,6 @@
 # <a id="top" />ZOOM
 
-![Превью](./zoom1.png)
+![Превью](./preview.png)
 
 ---
 
